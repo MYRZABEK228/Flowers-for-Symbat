@@ -14,12 +14,14 @@
             background-color: black;
             overflow: hidden;
         }
+
         .flower {
             position: relative;
-            width: 200px;
-            height: 200px;
-            animation: bloom 3s infinite;
+            width: 150px;
+            height: 150px;
+            animation: bloom 4s infinite;
         }
+
         @keyframes bloom {
             0%, 100% {
                 transform: scale(0.8);
@@ -30,79 +32,55 @@
                 opacity: 1;
             }
         }
+
         .petal {
             position: absolute;
-            width: 60px;
-            height: 100px;
-            background-color: pink;
-            border-radius: 30px 30px 0 0;
+            width: 80px;
+            height: 80px;
+            background: radial-gradient(circle at 50% 20%, #FFB6C1, #FF69B4);
+            border-radius: 50% 50% 0 0;
             transform-origin: bottom center;
             animation: sway 1.5s infinite;
         }
-        .petal:nth-child(1) {
-            transform: rotate(0deg);
-            left: 50%;
-            bottom: 100%;
-            margin-left: -30px;
-        }
-        .petal:nth-child(2) {
-            transform: rotate(90deg);
-            left: 50%;
-            bottom: 100%;
-            margin-left: -30px;
-        }
-        .petal:nth-child(3) {
-            transform: rotate(180deg);
-            left: 50%;
-            bottom: 100%;
-            margin-left: -30px;
-        }
-        .petal:nth-child(4) {
-            transform: rotate(270deg);
-            left: 50%;
-            bottom: 100%;
-            margin-left: -30px;
-        }
-        .petal:nth-child(5) {
-            transform: rotate(45deg);
-            left: 50%;
-            bottom: 100%;
-            margin-left: -30px;
-        }
-        .petal:nth-child(6) {
-            transform: rotate(135deg);
-            left: 50%;
-            bottom: 100%;
-            margin-left: -30px;
-        }
+
+        .petal:nth-child(1) { transform: rotate(0deg); }
+        .petal:nth-child(2) { transform: rotate(60deg); }
+        .petal:nth-child(3) { transform: rotate(120deg); }
+        .petal:nth-child(4) { transform: rotate(180deg); }
+        .petal:nth-child(5) { transform: rotate(240deg); }
+        .petal:nth-child(6) { transform: rotate(300deg); }
+
         @keyframes sway {
             0%, 100% {
                 transform: translateY(0) rotate(0);
             }
             50% {
-                transform: translateY(-10px) rotate(10deg);
+                transform: translateY(-10px) rotate(5deg);
             }
         }
+
         .center {
             position: absolute;
             width: 40px;
             height: 40px;
-            background-color: yellow;
+            background: radial-gradient(circle, #FFD700, #FFA500);
             border-radius: 50%;
             left: 50%;
-            bottom: 90px; /* Расположение центра относительно лепестков */
+            bottom: 70px;
             margin-left: -20px;
         }
+
         .stem {
             position: absolute;
             background-color: green;
-            width: 10px;
+            width: 8px;
             height: 120px;
             bottom: 0;
             left: 50%;
-            margin-left: -5px;
-            border-radius: 5px;
+            margin-left: -4px;
+            border-radius: 4px;
         }
+
         .leaf {
             position: absolute;
             width: 60px;
@@ -114,6 +92,7 @@
             margin-left: -30px;
             transform: rotate(45deg);
         }
+
         .message {
             position: absolute;
             top: 10%;
@@ -124,6 +103,7 @@
             opacity: 0;
             animation: fadeIn 3s forwards 3s; /* Задержка перед появлением текста */
         }
+
         @keyframes fadeIn {
             0% {
                 opacity: 0;
@@ -147,6 +127,6 @@
         <div class="leaf"></div>
     </div>
     
-    <div class="message">Мырзабектен Сымбатқа🌼</div>
+    <div class="message">Мырзабектен Сымбатқа🌸</div>
 </body>
 </html>
