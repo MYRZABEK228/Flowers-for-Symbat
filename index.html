@@ -17,18 +17,17 @@
         }
         .flower {
             position: relative;
-            width: 100px;
-            height: 100px;
-            animation: grow 3s forwards;
+            width: 100px; /* Общая ширина цветка */
+            height: 100px; /* Общая высота цветка */
+            animation: grow 2s forwards;
         }
         .petal {
             position: absolute;
-            width: 60px;
-            height: 30px;
+            width: 30px;
+            height: 60px;
             background: pink;
             border-radius: 30px;
-            transform-origin: 30px 15px; /* Центр лепестка */
-            animation: flap 3s forwards;
+            animation: flap 2s forwards;
         }
         @keyframes grow {
             0% {
@@ -54,19 +53,19 @@
                 transform: rotate(0deg);
             }
         }
-        .petal:nth-child(1) { top: 0; left: 20px; transform: rotate(0deg); }
-        .petal:nth-child(2) { top: 20px; left: 0; transform: rotate(90deg); }
-        .petal:nth-child(3) { top: 20px; left: 60px; transform: rotate(270deg); }
-        .petal:nth-child(4) { top: 60px; left: 20px; transform: rotate(180deg); }
+        .petal:nth-child(1) { top: 0; left: 35px; transform: rotate(0deg); }    /* Верхний лепесток */
+        .petal:nth-child(2) { top: 20px; left: 0; transform: rotate(90deg); } /* Левый лепесток */
+        .petal:nth-child(3) { top: 20px; left: 70px; transform: rotate(270deg); } /* Правый лепесток */
+        .petal:nth-child(4) { top: 60px; left: 35px; transform: rotate(180deg); } /* Нижний лепесток */
         .center {
             position: absolute;
             width: 40px;
             height: 40px;
-            background: yellow;
-            border-radius: 50%;
-            top: 30px;
-            left: 30px;
-            animation: pulse 3s infinite;
+            background: yellow; /* Цвет сердцевины цветка */
+            border-radius: 50%; /* Круглая форма сердцевины */
+            top: 30px; /* Положение сердцевины */
+            left: 30px; /* Положение сердцевины */
+            animation: pulse 2s infinite; /* Пульсация сердцевины */
         }
         @keyframes pulse {
             0%, 100% {
@@ -83,7 +82,7 @@
             transform: translateX(-50%);
             font-size: 24px;
             opacity: 0;
-            animation: fadeIn 2s forwards 3s; /* Задержка на 3 секунды перед появлением текста */
+            animation: fadeIn 2s forwards 2s; /* Задержка перед появлением текста */
         }
         @keyframes fadeIn {
             0% {
@@ -101,7 +100,7 @@
         <div class="petal"></div>
         <div class="petal"></div>
         <div class="petal"></div>
-        <div class="center"></div>
+        <div class="center"></div> <!-- Сердцевина цветка -->
     </div>
     <div class="message">Мырзабектен Сымбатқа♥️</div>
 </body>
