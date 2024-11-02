@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Анимация Сердца</title>
+    <title>Анимация Цветка</title>
     <style>
         body {
             margin: 0;
@@ -15,16 +15,42 @@
             color: white;
             overflow: hidden;
         }
-        .heart {
-            position: absolute;
-            animation: pulse 1.5s infinite;
+        .flower {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            animation: bloom 2s infinite;
         }
-        @keyframes pulse {
+        @keyframes bloom {
             0%, 100% {
-                transform: scale(1);
+                transform: scale(0.8);
+                opacity: 0.5;
             }
             50% {
-                transform: scale(1.1);
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        .petal {
+            position: absolute;
+            width: 30px;
+            height: 60px;
+            background-color: pink;
+            border-radius: 50%;
+            transform-origin: bottom;
+            animation: sway 1.5s infinite;
+        }
+        .petal:nth-child(1) { transform: rotate(0deg); }
+        .petal:nth-child(2) { transform: rotate(90deg); }
+        .petal:nth-child(3) { transform: rotate(180deg); }
+        .petal:nth-child(4) { transform: rotate(270deg); }
+
+        @keyframes sway {
+            0%, 100% {
+                transform: translateY(0) rotate(0);
+            }
+            50% {
+                transform: translateY(-10px) rotate(10deg);
             }
         }
         .message {
@@ -47,11 +73,13 @@
     </style>
 </head>
 <body>
-    <svg class="heart" style="width: 100px; height: 100px; top: 40%; left: 50%; transform: translateX(-50%);" viewBox="0 0 32 29.6">
-        <path fill="red" d="M23.6,0c-2.9,0-5.4,1.3-7.6,3.4C13.8,1.3,11.3,0,8.4,0C5.1,0,2.3,2.1,2.3,5.4
-            c0,3.3,2.9,6.1,7.1,10.1L16,29.6l6.6-13.8c4.3-4,7.1-6.8,7.1-10.1C29.7,2.1,26.9,0,23.6,0z"/>
-    </svg>
+    <div class="flower">
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+    </div>
     
-    <div class="message">Мырзабектен Сымбатқа♥️</div>
+    <div class="message">Мырзабектен Сымбатқа🌸</div>
 </body>
 </html>
