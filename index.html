@@ -16,9 +16,9 @@
         }
         .flower {
             position: relative;
-            width: 100px;
-            height: 100px;
-            animation: bloom 2s infinite;
+            width: 200px;
+            height: 200px;
+            animation: bloom 3s infinite;
         }
         @keyframes bloom {
             0%, 100% {
@@ -32,36 +32,36 @@
         }
         .petal {
             position: absolute;
-            width: 50px;
-            height: 80px;
+            width: 60px;
+            height: 100px;
             background-color: pink;
-            border-radius: 50%;
-            transform-origin: bottom;
+            border-radius: 30px 30px 0 0;
+            transform-origin: bottom center;
             animation: sway 1.5s infinite;
         }
         .petal:nth-child(1) {
             transform: rotate(0deg);
-            top: 0;
             left: 50%;
-            margin-left: -25px;
+            bottom: 100%;
+            margin-left: -30px;
         }
         .petal:nth-child(2) {
             transform: rotate(90deg);
-            top: 0;
             left: 50%;
-            margin-left: -25px;
+            bottom: 100%;
+            margin-left: -30px;
         }
         .petal:nth-child(3) {
             transform: rotate(180deg);
-            top: 0;
             left: 50%;
-            margin-left: -25px;
+            bottom: 100%;
+            margin-left: -30px;
         }
         .petal:nth-child(4) {
             transform: rotate(270deg);
-            top: 0;
             left: 50%;
-            margin-left: -25px;
+            bottom: 100%;
+            margin-left: -30px;
         }
         @keyframes sway {
             0%, 100% {
@@ -75,11 +75,22 @@
             position: absolute;
             background-color: green;
             width: 10px;
-            height: 100px;
+            height: 120px;
             bottom: 0;
             left: 50%;
             margin-left: -5px;
             border-radius: 5px;
+        }
+        .leaf {
+            position: absolute;
+            width: 60px;
+            height: 30px;
+            background-color: green;
+            border-radius: 30px;
+            bottom: 30px;
+            left: 50%;
+            margin-left: -30px;
+            transform: rotate(45deg);
         }
         .message {
             position: absolute;
@@ -108,6 +119,7 @@
         <div class="petal"></div>
         <div class="petal"></div>
         <div class="stem"></div>
+        <div class="leaf"></div>
     </div>
     
     <div class="message">Мырзабектен Сымбатқа🌼</div>
