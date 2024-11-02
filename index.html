@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Цветок анимация</title>
+    <title>Анимация цветков</title>
     <style>
         body {
             margin: 0;
@@ -16,63 +16,18 @@
             overflow: hidden;
         }
         .flower {
-            position: relative;
-            width: 100px; /* Общая ширина цветка */
-            height: 100px; /* Общая высота цветка */
-            animation: grow 2s forwards;
-        }
-        .petal {
             position: absolute;
-            width: 30px;
-            height: 60px;
-            background: pink;
-            border-radius: 30px;
-            animation: flap 2s forwards;
+            animation: grow 3s forwards;
         }
         @keyframes grow {
             0% {
                 transform: scale(0);
-                opacity: 0;
             }
             50% {
                 transform: scale(1.2);
             }
             100% {
                 transform: scale(1);
-                opacity: 1;
-            }
-        }
-        @keyframes flap {
-            0% {
-                transform: rotate(0deg);
-            }
-            50% {
-                transform: rotate(20deg);
-            }
-            100% {
-                transform: rotate(0deg);
-            }
-        }
-        .petal:nth-child(1) { top: 0; left: 35px; transform: rotate(0deg); }    /* Верхний лепесток */
-        .petal:nth-child(2) { top: 20px; left: 0; transform: rotate(90deg); } /* Левый лепесток */
-        .petal:nth-child(3) { top: 20px; left: 70px; transform: rotate(270deg); } /* Правый лепесток */
-        .petal:nth-child(4) { top: 60px; left: 35px; transform: rotate(180deg); } /* Нижний лепесток */
-        .center {
-            position: absolute;
-            width: 40px;
-            height: 40px;
-            background: yellow; /* Цвет сердцевины цветка */
-            border-radius: 50%; /* Круглая форма сердцевины */
-            top: 30px; /* Положение сердцевины */
-            left: 30px; /* Положение сердцевины */
-            animation: pulse 2s infinite; /* Пульсация сердцевины */
-        }
-        @keyframes pulse {
-            0%, 100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.1);
             }
         }
         .message {
@@ -82,7 +37,7 @@
             transform: translateX(-50%);
             font-size: 24px;
             opacity: 0;
-            animation: fadeIn 2s forwards 2s; /* Задержка перед появлением текста */
+            animation: fadeIn 3s forwards 3s; /* Задержка перед появлением текста */
         }
         @keyframes fadeIn {
             0% {
@@ -95,13 +50,36 @@
     </style>
 </head>
 <body>
-    <div class="flower">
-        <div class="petal"></div>
-        <div class="petal"></div>
-        <div class="petal"></div>
-        <div class="petal"></div>
-        <div class="center"></div> <!-- Сердцевина цветка -->
-    </div>
+    <svg class="flower" style="top: 20%; left: 15%;" viewBox="0 0 100 100">
+        <g fill="pink" stroke="purple" stroke-width="0.5">
+            <ellipse cx="50" cy="30" rx="20" ry="30" />
+            <ellipse cx="50" cy="70" rx="20" ry="30" transform="rotate(180 50 70)" />
+            <ellipse cx="30" cy="50" rx="30" ry="20" transform="rotate(270 30 50)" />
+            <ellipse cx="70" cy="50" rx="30" ry="20" />
+        </g>
+        <circle cx="50" cy="50" r="15" fill="yellow" />
+    </svg>
+
+    <svg class="flower" style="top: 50%; left: 30%;" viewBox="0 0 100 100">
+        <g fill="lightblue" stroke="blue" stroke-width="0.5">
+            <ellipse cx="50" cy="30" rx="20" ry="30" />
+            <ellipse cx="50" cy="70" rx="20" ry="30" transform="rotate(180 50 70)" />
+            <ellipse cx="30" cy="50" rx="30" ry="20" transform="rotate(270 30 50)" />
+            <ellipse cx="70" cy="50" rx="30" ry="20" />
+        </g>
+        <circle cx="50" cy="50" r="15" fill="orange" />
+    </svg>
+
+    <svg class="flower" style="top: 40%; left: 70%;" viewBox="0 0 100 100">
+        <g fill="lightgreen" stroke="green" stroke-width="0.5">
+            <ellipse cx="50" cy="30" rx="20" ry="30" />
+            <ellipse cx="50" cy="70" rx="20" ry="30" transform="rotate(180 50 70)" />
+            <ellipse cx="30" cy="50" rx="30" ry="20" transform="rotate(270 30 50)" />
+            <ellipse cx="70" cy="50" rx="30" ry="20" />
+        </g>
+        <circle cx="50" cy="50" r="15" fill="red" />
+    </svg>
+
     <div class="message">Мырзабектен Сымбатқа♥️</div>
 </body>
 </html>
