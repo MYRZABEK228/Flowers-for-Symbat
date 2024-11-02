@@ -71,6 +71,16 @@
                 transform: translateY(-10px) rotate(10deg);
             }
         }
+        .center {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-color: yellow;
+            border-radius: 50%;
+            left: 50%;
+            bottom: 90px; /* Расположение центра относительно лепестков */
+            margin-left: -20px;
+        }
         .stem {
             position: absolute;
             background-color: green;
@@ -118,6 +128,7 @@
         <div class="petal"></div>
         <div class="petal"></div>
         <div class="petal"></div>
+        <div class="center"></div>
         <div class="stem"></div>
         <div class="leaf"></div>
     </div>
