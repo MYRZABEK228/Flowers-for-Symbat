@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Анимация цветков</title>
+    <title>Анимация Сердца</title>
     <style>
         body {
             margin: 0;
@@ -15,19 +15,20 @@
             color: white;
             overflow: hidden;
         }
-        .flower {
+        .heart {
             position: absolute;
-            animation: grow 3s forwards;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+            animation: pulse 1.5s infinite;
         }
-        @keyframes grow {
-            0% {
-                transform: scale(0);
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
             }
             50% {
-                transform: scale(1.2);
-            }
-            100% {
-                transform: scale(1);
+                transform: scale(1.1);
             }
         }
         .message {
@@ -50,36 +51,9 @@
     </style>
 </head>
 <body>
-    <svg class="flower" style="top: 20%; left: 15%;" viewBox="0 0 100 100">
-        <g fill="pink" stroke="purple" stroke-width="0.5">
-            <ellipse cx="50" cy="30" rx="20" ry="30" />
-            <ellipse cx="50" cy="70" rx="20" ry="30" transform="rotate(180 50 70)" />
-            <ellipse cx="30" cy="50" rx="30" ry="20" transform="rotate(270 30 50)" />
-            <ellipse cx="70" cy="50" rx="30" ry="20" />
-        </g>
-        <circle cx="50" cy="50" r="15" fill="yellow" />
-    </svg>
-
-    <svg class="flower" style="top: 50%; left: 30%;" viewBox="0 0 100 100">
-        <g fill="lightblue" stroke="blue" stroke-width="0.5">
-            <ellipse cx="50" cy="30" rx="20" ry="30" />
-            <ellipse cx="50" cy="70" rx="20" ry="30" transform="rotate(180 50 70)" />
-            <ellipse cx="30" cy="50" rx="30" ry="20" transform="rotate(270 30 50)" />
-            <ellipse cx="70" cy="50" rx="30" ry="20" />
-        </g>
-        <circle cx="50" cy="50" r="15" fill="orange" />
-    </svg>
-
-    <svg class="flower" style="top: 40%; left: 70%;" viewBox="0 0 100 100">
-        <g fill="lightgreen" stroke="green" stroke-width="0.5">
-            <ellipse cx="50" cy="30" rx="20" ry="30" />
-            <ellipse cx="50" cy="70" rx="20" ry="30" transform="rotate(180 50 70)" />
-            <ellipse cx="30" cy="50" rx="30" ry="20" transform="rotate(270 30 50)" />
-            <ellipse cx="70" cy="50" rx="30" ry="20" />
-        </g>
-        <circle cx="50" cy="50" r="15" fill="red" />
-    </svg>
-
+    <div class="heart" style="top: 30%; left: 30%;"></div>
+    <div class="heart" style="top: 50%; left: 50%; animation-delay: 0.5s;"></div>
+    <div class="heart" style="top: 40%; left: 70%; animation-delay: 1s;"></div>
     <div class="message">Мырзабектен Сымбатқа♥️</div>
 </body>
 </html>
