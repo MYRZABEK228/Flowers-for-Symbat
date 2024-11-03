@@ -3,130 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Анимация Цветка</title>
+    <title>Цветок для Сымбат</title>
     <style>
         body {
             margin: 0;
-            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
+            height: 100vh;
             background-color: black;
-            overflow: hidden;
-        }
-
-        .flower {
-            position: relative;
-            width: 150px;
-            height: 150px;
-            animation: bloom 4s infinite;
-        }
-
-        @keyframes bloom {
-            0%, 100% {
-                transform: scale(0.9);
-                opacity: 0.7;
-            }
-            50% {
-                transform: scale(1);
-                opacity: 1;
-            }
-        }
-
-        .petal {
-            position: absolute;
-            width: 80px;
-            height: 80px;
-            background: radial-gradient(circle at 50% 20%, #FFB6C1, #FF69B4);
-            border-radius: 50% 50% 0 0;
-            transform-origin: bottom center;
-            animation: sway 1.5s infinite;
-        }
-
-        .petal:nth-child(1) { transform: rotate(0deg); }
-        .petal:nth-child(2) { transform: rotate(60deg); }
-        .petal:nth-child(3) { transform: rotate(120deg); }
-        .petal:nth-child(4) { transform: rotate(180deg); }
-        .petal:nth-child(5) { transform: rotate(240deg); }
-        .petal:nth-child(6) { transform: rotate(300deg); }
-
-        @keyframes sway {
-            0%, 100% {
-                transform: translateY(0) rotate(0);
-            }
-            50% {
-                transform: translateY(-10px) rotate(5deg);
-            }
-        }
-
-        .center {
-            position: absolute;
-            width: 40px;
-            height: 40px;
-            background: radial-gradient(circle, #FFD700, #FFA500);
-            border-radius: 50%;
-            left: 50%;
-            bottom: 70px;
-            margin-left: -20px;
-        }
-
-        .stem {
-            position: absolute;
-            background-color: green;
-            width: 10px;
-            height: 120px;
-            bottom: 0;
-            left: 50%;
-            margin-left: -5px;
-            border-radius: 5px;
-        }
-
-        .leaf {
-            position: absolute;
-            width: 60px;
-            height: 30px;
-            background-color: green;
-            border-radius: 30px;
-            bottom: 30px;
-            left: 50%;
-            margin-left: -30px;
-            transform: rotate(45deg);
-        }
-
-        .message {
-            position: absolute;
-            top: 10%;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 24px;
             color: white;
-            opacity: 0;
-            animation: fadeIn 3s forwards 3s; /* Задержка перед появлением текста */
+            font-family: Arial, sans-serif;
+            text-align: center;
         }
-
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
+        
+        .flower-image {
+            width: 300px; /* ширина изображения */
+            height: auto;
+            margin-bottom: 20px;
+        }
+        
+        .message {
+            font-size: 24px;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <div class="flower">
-        <div class="petal"></div>
-        <div class="petal"></div>
-        <div class="petal"></div>
-        <div class="petal"></div>
-        <div class="petal"></div>
-        <div class="petal"></div>
-        <div class="center"></div>
-        <div class="stem"></div>
-        <div class="leaf"></div>
-    </div>
-    
+    <!-- Замените ссылку src на URL нужного изображения цветка -->
+    <img src="https://example.com/your-flower-image.jpg" alt="Цветок" class="flower-image">
+
     <div class="message">Мырзабектен Сымбатқа🌸</div>
 </body>
 </html>
