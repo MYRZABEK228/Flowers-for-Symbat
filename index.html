@@ -13,26 +13,40 @@
             flex-direction: column;
             height: 100vh;
             background-color: black;
-            color: white;
+            overflow: hidden;
             font-family: Arial, sans-serif;
-            text-align: center;
         }
         
         .flower-image {
-            width: 300px; /* ширина изображения */
+            width: 400px; /* Увеличенный размер изображения */
             height: auto;
             margin-bottom: 20px;
         }
-        
+
         .message {
-            font-size: 24px;
-            margin-top: 20px;
+            font-size: 28px;
+            color: white;
+            position: absolute;
+            top: -100px; /* Начальная позиция за пределами экрана */
+            animation: slideDown 2s forwards;
+        }
+
+        /* Анимация для текста */
+        @keyframes slideDown {
+            0% {
+                top: -100px;
+                opacity: 0;
+            }
+            100% {
+                top: 20px; /* Позиция текста */
+                opacity: 1;
+            }
         }
     </style>
 </head>
 <body>
     <!-- Замените ссылку src на URL нужного изображения цветка -->
-    <img src="https://images.app.goo.gl/eNcBSCPChAgUNaRSA" alt="для тебя😉" class="flower-image">
+    <img src="https://images.app.goo.gl/eNcBSCPChAgUNaRSA" alt="Цветок" class="flower-image">
 
     <div class="message">Мырзабектен Сымбатқа🌸</div>
 </body>
